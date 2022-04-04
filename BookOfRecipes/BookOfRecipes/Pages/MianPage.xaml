@@ -17,7 +17,8 @@
                        VerticalAlignment="Top"
                        Name="WP">
                 <Border Height="350"
-                        Width="250">
+                        Width="250"
+                        MouseDown="Border_MouseDown">
                     <Grid>
                         <Image Source="/Images/Recipe.jpg"
                                Height="250"
@@ -67,7 +68,8 @@
                     </Grid>
                 </Border>
                 <Border Height="350"
-                        Width="250">
+                        Width="250"
+                        MouseDown="Border_MouseDown">
                     <Grid>
                         <Image Source="/Images/image2.jpg"
                                Height="250"
@@ -117,7 +119,8 @@
                     </Grid>
                 </Border>
                 <Border Height="350"
-                        Width="250">
+                        Width="250"
+                        MouseDown="Border_MouseDown">
                     <Grid>
                         <Image Source="/Images/image3.jpg"
                                Height="250"
@@ -167,7 +170,8 @@
                     </Grid>
                 </Border>
                 <Border Height="350"
-                        Width="250">
+                        Width="250"
+                        MouseDown="Border_MouseDown">
                     <Grid>
                         <Image Source="/Images/image4.jpg"
                                Height="250"

@@ -41,5 +41,11 @@ namespace BookOfRecipes.Pages
                 WP.Children.Add(GenerateElement.Slot(this, Recipe));
             }
         }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Border border = sender as Border;
+            FrameClass.Frm.Navigate(new RecipePage((SlotModel)ModelsGlobal.slotModels[0]));
+        }
     }
 }
