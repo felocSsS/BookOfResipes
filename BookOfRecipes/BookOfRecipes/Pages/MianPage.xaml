@@ -1,0 +1,222 @@
+﻿<Page x:Class="BookOfRecipes.Pages.MianPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BookOfRecipes.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="2000" d:DesignWidth="1366"
+      Title="MianPage"
+      SizeChanged="Page_SizeChanged">
+
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Hidden"
+                      VerticalScrollBarVisibility="Visible">
+            <WrapPanel Margin="0 70 0 0"
+                       Orientation="Horizontal"
+                       VerticalAlignment="Top"
+                       Name="WP">
+                <Border Height="350"
+                        Width="250">
+                    <Grid>
+                        <Image Source="/Images/Recipe.jpg"
+                               Height="250"
+                               Width="250"
+                               Stretch="UniformToFill">
+                            <Image.Clip>
+                                <RectangleGeometry RadiusX="20" RadiusY="20" Rect="0,0,250,250"/>
+                            </Image.Clip>
+                        </Image>
+                        <TextBlock Text="Наталья Шихарева"
+                                   Foreground="White"
+                                   Margin="10 65 0 0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"/>
+                        <TextBlock Text="Драники по-царски"
+                                   Foreground="White"
+                                   Margin="10 90 0 0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"
+                                   FontSize="20"/>
+                        <StackPanel Orientation="Horizontal"
+                                    VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Left"
+                                    Margin="10 0 0 60">
+                            <Image Source="/Images/Time.png"
+                                   Width="25"
+                                   Height="25"/>
+                            <TextBlock Text="20 минут"
+                                       Foreground="White"
+                                       FontSize="16"
+                                       VerticalAlignment="Center"
+                                       Margin="10 0 0 0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Right"
+                                    Margin="0 0 10 60">
+                            <Image Source="/Images/Grade.png"
+                                   Width="25"
+                                   Height="25"/>
+                            <TextBlock Text="4.5"
+                                       Foreground="White"
+                                       FontSize="16"
+                                       VerticalAlignment="Center"
+                                       Margin="10 0 0 0"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <Border Height="350"
+                        Width="250">
+                    <Grid>
+                        <Image Source="/Images/image2.jpg"
+                               Height="250"
+                               Width="250"
+                               Stretch="UniformToFill">
+                            <Image.Clip>
+                                <RectangleGeometry RadiusX="20" RadiusY="20" Rect="0,0,250,250"/>
+                            </Image.Clip>
+                        </Image>
+                        <TextBlock Text="Наталья Шихарева"
+                                   Foreground="White"
+                                   Margin="10 65 0 0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"/>
+                        <TextBlock Text="Драники по-царски"
+                                   Foreground="White"
+                                   Margin="10 90 0 0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"
+                                   FontSize="20"/>
+                        <StackPanel Orientation="Horizontal"
+                                    VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Left"
+                                    Margin="10 0 0 60">
+                            <Image Source="/Images/Time.png"
+                                   Width="25"
+                                   Height="25"/>
+                            <TextBlock Text="20 минут"
+                                       Foreground="White"
+                                       FontSize="16"
+                                       VerticalAlignment="Center"
+                                       Margin="10 0 0 0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Right"
+                                    Margin="0 0 10 60">
+                            <Image Source="/Images/Grade.png"
+                                   Width="25"
+                                   Height="25"/>
+                            <TextBlock Text="4.5"
+                                       Foreground="White"
+                                       FontSize="16"
+                                       VerticalAlignment="Center"
+                                       Margin="10 0 0 0"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <Border Height="350"
+                        Width="250">
+                    <Grid>
+                        <Image Source="/Images/image3.jpg"
+                               Height="250"
+                               Width="250"
+                               Stretch="UniformToFill">
+                            <Image.Clip>
+                                <RectangleGeometry RadiusX="20" RadiusY="20" Rect="0,0,250,250"/>
+                            </Image.Clip>
+                        </Image>
+                        <TextBlock Text="Наталья Шихарева"
+                                   Foreground="White"
+                                   Margin="10 65 0 0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"/>
+                        <TextBlock Text="Драники по-царски"
+                                   Foreground="White"
+                                   Margin="10 90 0 0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"
+                                   FontSize="20"/>
+                        <StackPanel Orientation="Horizontal"
+                                    VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Left"
+                                    Margin="10 0 0 60">
+                            <Image Source="/Images/Time.png"
+                                   Width="25"
+                                   Height="25"/>
+                            <TextBlock Text="20 минут"
+                                       Foreground="White"
+                                       FontSize="16"
+                                       VerticalAlignment="Center"
+                                       Margin="10 0 0 0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Right"
+                                    Margin="0 0 10 60">
+                            <Image Source="/Images/Grade.png"
+                                   Width="25"
+                                   Height="25"/>
+                            <TextBlock Text="4.5"
+                                       Foreground="White"
+                                       FontSize="16"
+                                       VerticalAlignment="Center"
+                                       Margin="10 0 0 0"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <Border Height="350"
+                        Width="250">
+                    <Grid>
+                        <Image Source="/Images/image4.jpg"
+                               Height="250"
+                               Width="250"
+                               Stretch="UniformToFill">
+                            <Image.Clip>
+                                <RectangleGeometry RadiusX="20" RadiusY="20" Rect="0,0,250,250"/>
+                            </Image.Clip>
+                        </Image>
+                        <TextBlock Text="Наталья Шихарева"
+                                   Foreground="White"
+                                   Margin="10 65 0 0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"/>
+                        <TextBlock Text="Драники по-царски"
+                                   Foreground="White"
+                                   Margin="10 90 0 0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"
+                                   FontSize="20"/>
+                        <StackPanel Orientation="Horizontal"
+                                    VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Left"
+                                    Margin="10 0 0 60">
+                            <Image Source="/Images/Time.png"
+                                   Width="25"
+                                   Height="25"/>
+                            <TextBlock Text="20 минут"
+                                       Foreground="White"
+                                       FontSize="16"
+                                       VerticalAlignment="Center"
+                                       Margin="10 0 0 0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Right"
+                                    Margin="0 0 10 60">
+                            <Image Source="/Images/Grade.png"
+                                   Width="25"
+                                   Height="25"/>
+                            <TextBlock Text="4.5"
+                                       Foreground="White"
+                                       FontSize="16"
+                                       VerticalAlignment="Center"
+                                       Margin="10 0 0 0"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

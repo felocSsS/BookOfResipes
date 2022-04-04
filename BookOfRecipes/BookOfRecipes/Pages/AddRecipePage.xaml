@@ -1,0 +1,272 @@
+﻿<Page x:Class="BookOfRecipes.Pages.AddRecipePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BookOfRecipes.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="2000" d:DesignWidth="1366"
+      Title="AddRecipePage">
+
+    <Grid>
+        <ScrollViewer Name="MainSV">
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center">
+                <TextBlock Text="Новый Рецепт"
+                           Foreground="White"
+                           FontSize="32"
+                           HorizontalAlignment="Left"/>
+                <TextBlock Text="Изображение"
+                           Foreground="White"
+                           FontSize="28"
+                           Margin="0 10 0 0"/>
+                <Border BorderBrush="{StaticResource ColorForCurrentBtn}"
+                        BorderThickness="1"
+                        Height="250"
+                        Width="250" Background="#33000000"
+                        HorizontalAlignment="Left">
+                    <Grid>
+                        <Image Height="250"
+                               Width="250"
+                               Stretch="UniformToFill"
+                               Name="ImageOfrecipe"/>
+                        <Border Background="#33000000"
+                                Height="35"
+                                Width="35"
+                                CornerRadius="20"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Bottom"
+                                Margin="0 0 15 15"
+                                Name="BtnAddImage"
+                                MouseDown="BtnAddImage_MouseDown">
+                            <Image Source="/Images/BtnAddImage.png"/>
+                        </Border>
+                    </Grid>
+                </Border>
+                <TextBlock Text="Название рецепта"
+                           Foreground="White"
+                           FontSize="28"
+                           Margin="0 10 0 0"/>
+                <TextBox Height="35"
+                         Width="250"
+                         FontSize="18"
+                         Foreground="#FF797979"
+                         Margin="0 10 0 0"
+                         HorizontalAlignment="Left"
+                         Name="TBName">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                            <Setter Property="BorderThickness" Value="2"/>
+                            <Setter Property="BorderBrush" Value="#303030"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <TextBlock Text="Описание"
+                           Foreground="White"
+                           FontSize="28"
+                           Margin="0 10 0 0"/>
+                <TextBox Height="210"
+                         Width="450"
+                         FontSize="18"
+                         Foreground="#FF797979"
+                         Margin="0 10 0 0"
+                         HorizontalAlignment="Left"
+                         Name="TBDescription"
+                         TextWrapping="Wrap">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                            <Setter Property="BorderThickness" Value="2"/>
+                            <Setter Property="BorderBrush" Value="#303030"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <TextBlock Text="Время приготовления (в минутах)"
+                           Foreground="White"
+                           FontSize="28"
+                           Margin="0 10 0 0"/>
+                <TextBox Height="35"
+                         Width="250"
+                         FontSize="18"
+                         Foreground="#FF797979"
+                         Margin="0 10 0 0"
+                         HorizontalAlignment="Left"
+                         Name="TBTime">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                            <Setter Property="BorderThickness" Value="2"/>
+                            <Setter Property="BorderBrush" Value="#303030"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <TextBlock Text="Количество калорий"
+                           Foreground="White"
+                           FontSize="28"
+                           Margin="0 10 0 0"/>
+                <TextBox Height="35"
+                         Width="250"
+                         FontSize="18"
+                         Foreground="#FF797979"
+                         Margin="0 10 0 0"
+                         HorizontalAlignment="Left"
+                         Name="TBColories">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                            <Setter Property="BorderThickness" Value="2"/>
+                            <Setter Property="BorderBrush" Value="#303030"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <TextBlock Text="Ингредиенты"
+                           Foreground="White"
+                           FontSize="28"
+                           Margin="0 10 0 0"/>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 10 0 0">
+                    <TextBlock Text="Название"
+                           Foreground="White"
+                           FontSize="24"/>
+                    <TextBlock Text="Количество"
+                           Foreground="White"
+                           FontSize="24"
+                           Margin="275 0 0 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical"
+                            Margin="0 10 0 0"
+                            Name="SPIng">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Height="35"
+                             Width="250"
+                             FontSize="18"
+                             Foreground="#FF797979"
+                             HorizontalAlignment="Left">
+                            <TextBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                    <Setter Property="BorderThickness" Value="2"/>
+                                    <Setter Property="BorderBrush" Value="#303030"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                        <ComboBox Width="100"
+                                  FontSize="18"
+                                  Height="35"
+                                  Style="{StaticResource RoundComboBox}"
+                                  Margin="15 0 0 0">
+                            <ComboBoxItem Content="г" 
+                                          IsSelected="True"/>
+                            <ComboBoxItem Content="мл"/>
+                            <ComboBoxItem Content="шт"/>
+                            <ComboBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </ComboBox.Resources>
+                        </ComboBox>
+                        <TextBox Height="35"
+                             Width="125"
+                             FontSize="18"
+                             Foreground="#FF797979"
+                             HorizontalAlignment="Left"
+                                 Margin="15 0 0 0">
+                            <TextBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                    <Setter Property="BorderThickness" Value="2"/>
+                                    <Setter Property="BorderBrush" Value="#303030"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Border Background="White"
+                            HorizontalAlignment="Left"
+                            CornerRadius="10"
+                            Margin="0 10 0 0"
+                            Name="BtnAddingridient"
+                            MouseDown="BtnAddingridient_MouseDown">
+                        <TextBlock Text="Добавить ингридиент"
+                                   FontSize="18"
+                                   Padding="10 5 10 5"/>
+                    </Border>
+                    <Border Background="White"
+                        HorizontalAlignment="Left"
+                        CornerRadius="10"
+                        Margin="30 10 0 0"
+                        Name="BtnDeleteingridient"
+                        MouseDown="BtnDeleteingridient_MouseDown">
+                        <TextBlock Text="Удалить ингридиент"
+                               FontSize="18"
+                               Padding="10 5 10 5"/>
+                    </Border>
+                </StackPanel>
+                <TextBlock Text="Шаги"
+                           Foreground="White"
+                           FontSize="28"
+                           Margin="0 10 0 0"/>
+                <StackPanel Orientation="Vertical"
+                            Margin="0 10 0 0">
+                    <StackPanel Orientation="Vertical"
+                                Name="SPStep">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="Шаг 1"
+                                       Foreground="White"
+                                       FontSize="24"/>
+                            <TextBox Height="210"
+                                 Width="450"
+                                 FontSize="18"
+                                 Foreground="#FF797979"
+                                 Margin="0 10 0 0"
+                                 HorizontalAlignment="Left"
+                                     TextWrapping="Wrap">
+                                <TextBox.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                        <Setter Property="BorderThickness" Value="2"/>
+                                        <Setter Property="BorderBrush" Value="#303030"/>
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Border Background="White"
+                                HorizontalAlignment="Left"
+                                CornerRadius="10"
+                                Margin="0 10 0 0"
+                                Name="BtnAddSrep"
+                                MouseDown="BtnAddSrep_MouseDown">
+                            <TextBlock Text="Добавить шаг"
+                                       FontSize="18"
+                                       Padding="10 5 10 5"/>
+                        </Border>
+                        <Border Background="White"
+                                HorizontalAlignment="Left"
+                                CornerRadius="10"
+                                Margin="30 10 0 0"
+                                Name="BtnDeleteStep"
+                                MouseDown="BtnDeleteStep_MouseDown">
+                            <TextBlock Text="Удалить шаг"
+                                       FontSize="18"
+                                       Padding="10 5 10 5"/>
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+                <Border Background="White"
+                                HorizontalAlignment="Center"
+                                CornerRadius="10"
+                                Margin="0 30 0 0"
+                                Name="BtnSaveRecipe"
+                                MouseDown="BtnSaveRecipe_MouseDown">
+                    <TextBlock Text="Опубликовать"
+                                       FontSize="24"
+                                       Padding="10 5 10 5"/>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
